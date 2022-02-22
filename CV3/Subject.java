@@ -1,38 +1,46 @@
 import java.util.Scanner;
 public class Subject
 {
-    public String Subject_name;
-    public int Subject_points;
-    public int Minimal_Points = 15;
+    private String Subject_name;
+    private int ExamPoints;
+    private int SubjectPoints;
+    private int MinimalPoints = 15;
     static Scanner sc;
-    public int yes;
+    public boolean nono;
+    private int points;
+
 }
 
 public static void BPC1 ()
 {
-    system.out.println("Chcete zadat body ze cvičení (0) nebo ze zkoušky (1)?");
-    Scanner sc = new Scanner(System.in);
-    yes = sc.nextInt();
-    if (yes == 0)
-    {
-        Exercises_Points();
-    }
-    else if (yes == 1)
-    {
-        Exam_Points();
-    }
-    else ()
-    {
-        system.out.println("Zadali jste spatne cislo");
-    }
+    System.out.println("BPC-1");
+    if (SubjectPoints > MinimalPoints)
 }
 
 
 private static void Exercises_Points ()
 {
-
+    if (SubjectPoints + points < 21)
+    {
+        nono = false;
+    }
+    else
+    {
+        System.out.println ("Maximal score in Excercises is 20 points");
+        nono = true;
+    }
 }
-private static void Exam_Points()
+private static void Exam_Points(int body)
 {
+    if (body < 81)
+    {
+        Exam_Points = points;
+        nono = false;
+    }
+    else
+    {
+        System.out.println("Maximal score on final exam is 80 points");
+        nono = true;
+    }
 
 }
