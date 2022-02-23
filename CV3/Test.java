@@ -22,53 +22,53 @@ public class Test {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        BPC1 a = new Subject();
-        BPC2 b = new SubjectBPC2();
-        BPIS c = new SubjectBPC_pis();
+        Subject a = new Subject();
+        SubjectBPC2 b = new SubjectBPC2();
+        SubjectBPC_pis c = new SubjectBPC_pis();
 
 
 
-        System.out.println(a.getName() + " Add your score in points (max.20):");
-        do{
-            a.setTutorialPoints(getInt(input));
-        } while (a.problem);
+       // System.out.println(a.getSubject_name() + " Add your score in points (max.20):");
+        //do{
+          //  a.setPoints(getInt(input));
+        //} while (a.nono);
 
-        System.out.println(a.getName() + " | Zadejte bodov� hodnocen� z�v�re�n� zkou�ky (max.80):");
-        do{
-            a.setFinalExamPoints(getInt(input));
-        } while (a.problem);
+       // System.out.println(a.getSubject_name() + " | Zadejte bodov� hodnocen� z�v�re�n� zkou�ky (max.80):");
+        //do{
+        //    a.setBodyZkouska(getInt(input));
+        //} while (a.nono);
 
 
         // PREDMET BPC2
 
-        System.out.println(b.getName() + " | Zadejte bodov� hodnocen� projektu (max.30):");
+        System.out.println(b.getSubject_Name() + " - Enter your Project score (max.30 pts):");
         do{
-            b.setProjectPoints(getInt(input));
-        } while (b.problem);
+            b.setBodyZProjektu(getInt(input));
+        } while (b.nono);
 
-        System.out.println(b.getName() + " | Zadejte bodov� hodnocen� p�lsemestr�ln� zkou�ky (max.20):");
+        System.out.println(b.getSubject_Name() + " - Enter your Lecture Test score (max.20 pts):");
         do{
-            b.setHalfExamPoints(getInt(input));
-        } while (b.problem);
+            b.setPulsemestralka(getInt(input));
+        } while (b.nono);
 
-        System.out.println(b.getName() + " | Zadejte bodov� hodnocen� z�v�re�n� zkou�ky (max.50):");
+        System.out.println(b.getSubject_Name() + " - Enter your final exam score (max.50 pts):");
         do{
-            b.setFinalExamPoints(getInt(input));
-        } while (b.problem);
+            b.setBodyZkouska(getInt(input));
+        } while (b.nono);
 
 
         // PREDMET BPIS
 
-        System.out.println(c.getName() + " | Zadejte bodov� hodnocen� p�edm�tu (max.100):");
-        do{
-            c.setPoints(getInt(input));
-        } while (c.problem);
+        //System.out.println(c.getSubject_name() + " - Enter your score from this subject (maximum of 100 pts):");
+        //do{
+          //  c.setPoints(getInt(input));
+       // } while (c.nono);
 
-        a.getEval();
-        b.getEval();
-        c.getEval();
+        a.getMamZapocet();
+        b.getMamZapocet();
+        c.getMamZapocet();
 
-        System.out.println("Konec programu");
+        System.out.println("Program ended");
 
         input.close();
     }
